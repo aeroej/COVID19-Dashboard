@@ -2,14 +2,14 @@ const express = require('express')
 const app = express();
 const PORT = 5000;
  
-function Listen(){
+function listen(){
     console.log(`Listen on: http://localhost:${PORT}`);
 }
 
-function Home(req, res){
+function home(req, res){
     res.sendFile(__dirname + '/views/index.html');
 }
 
-app.get("/", Home);
+app.get("/", home);
 
-app.listen(PORT, Listen);
+app.listen(PORT, listen);

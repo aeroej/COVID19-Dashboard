@@ -6,7 +6,7 @@
 - [x] URL Routing 처리(index.html 출력, nodemon 모듈 설치)
 - [x] views 폴더를 static 디렉토리로 설정
 - [x] images 폴더 생성 후 html에 image 출력
-- [x] localhost:{port}/index/ 로 접속 시 index.html 출력 
+- [x] localhost:{port}/index 로 접속 시 index.html 출력 
 - [x] POST 요청을 위한 form.html 생성
 - [x] postman 프로그램 설치
 - [ ] postman 사용법 확인

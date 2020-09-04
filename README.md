@@ -10,9 +10,9 @@
 - [x] POST 요청을 위한 form.html 생성
 - [x] postman 프로그램 설치
 - [ ] postman 사용법 확인
-- [ ] express 모듈의 router 기능 공부 : 라우터로 페이지 2~3개 구현
+- [x] express 모듈의 router 기능 공부 : 라우터로 페이지 2~3개 구현
 - [x] readme 작성요령 확인 (마크다운 문법 검색)
-- [ ] Requiest Response 처리 기본 학습 (View engine 응답처리, JSON의 Ajax 처리)
+- [x] Requiest Response 처리 기본 학습 (View engine 응답처리, JSON의 Ajax 처리)
 - [ ] Router 모듈화와 리팩토링
 
 <br/>

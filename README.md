@@ -15,7 +15,7 @@
 - [x] bodyParser로 클라이언트에서 받은 text 조회
 - [x] templates 폴더를 추가하고 폴더 안에 email.ejs 파일 추가
 - [x] express view engine 중에서 ejs 사용
-- [] app.js와 form.html을 수정하여 JSON을 통한 Ajax처리
+- [x] app.js와 form.html을 수정하여 JSON을 통한 Ajax처리
 - [ ] Router 모듈화와 te리팩토링
 
 <br/>

@@ -17,6 +17,10 @@
 - [x] express view engine 중에서 ejs 사용
 - [x] app.js와 form.html을 수정하여 JSON을 통한 Ajax처리
 - [x] Router 모듈화
+- [x] postman을 이용한 API 호출 테스트
+- [x] Fetch API를 이용한 우리나라 데이터 호출
+- [x] 호출한 데이터를 웹에 출력
+- [ ] UI는 table로 하여 데이터 출력 
 
 <br/>
 

@@ -6,6 +6,12 @@ app.listen(5000, function(){
     console.log("start, express server on port 5000");
 });
 
+// var data = {
+//     name : "",
+//     addr:"",
+//     tel:""
+// };
+
 app.use(express.static('views'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
@@ -29,6 +35,14 @@ app.get('/email', function(req,res){
     res.sendFile(__dirname + "/views/form.html")
 })
 
+app.get('/member', function(req,res){
+    res.sendFile(__dirname + "/views/member.html")
+})
+
+app.get('/fetch', function(req,res){
+    res.sendFile(__dirname + "/views/fetch.html")
+})
+
 app.post('/email_post', function(req, res){
     //get : req.param('email')
     console.log(req.body.email)
@@ -42,4 +56,12 @@ app.post('/ajax_send_email', function(req, res){
     //check validation about input value => select db
     var responseData = {'result': 'ok', 'email' : req.body.email}
     res.json(responseData)
+});
+
+app.post('/member',(req,res)=>{
+    console.log("POST로 데이터 수신");
+    console.log("이름 : " + req.body.name);
+    console.log("주소 : " + req.body.addr);
+    console.log("전화 : " + req.body.tel);
+    res.send("Server Get");
 });

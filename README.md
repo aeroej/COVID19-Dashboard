@@ -7,13 +7,20 @@
 - [x] views 폴더를 static 디렉토리로 설정
 - [x] images 폴더 생성 후 html에 image 출력
 - [x] localhost:{port}/index 로 접속 시 index.html 출력 
-- [x] POST 요청을 위한 form.html 생성
+- [x] views 폴더에 POST 요청을 위한 form.html 생성
 - [x] postman 프로그램 설치
-- [ ] postman 사용법 확인
+- [x] postman 사용법 확인
 - [x] express 모듈의 router 기능 공부 : 라우터로 페이지 2~3개 구현
 - [x] readme 작성요령 확인 (마크다운 문법 검색)
-- [x] Requiest Response 처리 기본 학습 (View engine 응답처리, JSON의 Ajax 처리)
-- [ ] Router 모듈화와 리팩토링
+- [x] bodyParser로 클라이언트에서 받은 text 조회
+- [x] templates 폴더를 추가하고 폴더 안에 email.ejs 파일 추가
+- [x] express view engine 중에서 ejs 사용
+- [x] app.js와 form.html을 수정하여 JSON을 통한 Ajax처리
+- [x] Router 모듈화
+- [x] postman을 이용한 API 호출 테스트
+- [x] Fetch API를 이용한 우리나라 데이터 호출
+- [x] 호출한 데이터를 웹에 출력
+- [ ] UI는 table로 하여 데이터 출력 
 
 <br/>
 

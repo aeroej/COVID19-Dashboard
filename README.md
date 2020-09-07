@@ -17,6 +17,7 @@
 - [x] express view engine 중에서 ejs 사용
 - [x] app.js와 form.html을 수정하여 JSON을 통한 Ajax처리
 - [x] Router 모듈화
+- [x] RESTful API 개념 공부 (4가지 Method, 4가지 연산, member.html은 기존에 했던 것과 동일한 POST 예제)
 - [x] postman을 이용한 API 호출 테스트
 - [x] Fetch API를 이용한 우리나라 데이터 호출
 - [x] 호출한 데이터를 웹에 출력

@@ -1,1 +1,0 @@
-console.log("index is loaded");

@@ -65,3 +65,8 @@ app.post('/member',(req,res)=>{
     console.log("전화 : " + req.body.tel);
     res.send("Server Get");
 });
+
+
+app.get('/api', function(req,res){
+    res.sendFile(__dirname + "/api/api.js")
+})

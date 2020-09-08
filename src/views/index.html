@@ -7,43 +7,22 @@
     <title>index.html</title>
 </head>
 <body>
+    <!-- 루트 페이지 -->
     <h1>COVID-19</h1>
     <p>South Korea</p>
-
 
     <button id="getData">Get COVID DATA</button>
     <hr>
     <div id="output"></div>
 
-    <script>
-        /**
+    <script src="api">
+      /**
        * api.js의 함수 불러오기
        * window.onload 사용하여 함수 호출
        * fetch의 결과는 JSON 타입으로 이 페이지에 출력
-       */
-        document.getElementById('getData').addEventListener('click', getData);
-
-        function getData(){
-            fetch('https://api.covid19api.com/dayone/country/south-korea/status/confirmed')
-            .then((res)=>res.json())
-            .then((data) => {
-                let output = `
-                    <h2>COVID19-DayOne</h2>
-                `;
-                data.forEach(function(e){
-                    output += `
-                    <u1>
-                        <li>Country : ${e.Country}</li>
-                        <li>CountryCode : ${e.CountryCode}</li>
-                        <li>Cases : ${e.Cases}</li>
-                        <li>Date : ${e.Date}</li>
-                    </u1>      
-                    </br>              
-                    `;
-                })
-                document.getElementById('output').innerHTML = output;
-            });
-        }
+       */ 
     </script>
+
+    
 </body>
 </html>

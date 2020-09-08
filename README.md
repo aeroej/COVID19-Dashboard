@@ -36,7 +36,7 @@
 - [ ] api.js에 함수만 남겨두고, window.onload는 index.html 파일로 옮기기 
 (인덱스 페이지 접속 -> api.js의 함수 호출 -> 데이터를 메인 페이지에 rendering)
 - [ ] UI 꾸미기
-          bootstrap, pure : 순수 자바스크립트 : vanilla js, 차후 자체적으로 만들어도 프레임웤 쓴 것처럼 되므로 css 프레임웤에 너무 의존하는 것은 권장X
+<pre>bootstrap, pure : 순수 자바스크립트 : vanilla js, 차후 자체적으로 만들어도 프레임웤 쓴 것처럼 되므로 css 프레임웤에 너무 의존하는 것은 권장X<code>
 - [ ] callback hell 찾아보기
 - [ ] fetch API 사용한 부분 리팩토링
 

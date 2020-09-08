@@ -1,4 +1,5 @@
 # Task
+##### 9월 첫째주
 - [x] Naming 수정 (명사형)
 - [x] src 디렉토리 생성 후 index.js 이동
 - [x] src 디렉토리 내 views 디렉토리 생성하여 index.html 생성

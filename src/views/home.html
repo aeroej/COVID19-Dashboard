@@ -4,10 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>home.html</title>
+    <title>index.html</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <h1>main page</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    
+    <img src="images/test.png" alt="" width="300px;">
+
+
+    <button id="getText">Get Text</button>
+    <button id="getUsers">Get JSON</button>
+    <button id="getPosts">Get API DATA</button>
+    <button id="getData">Get COVID DATA</button>
+    <hr>
+    <div id="output"></div>
+    <form id="addPost">
+        <div>
+            <input type="text" id="title" placeholder="Title">
+        </div>
+
+        <div>
+            <textarea id="body" placeholder="Body"></textarea>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.getElementById('getText').addEventListener('click', getText);
+        document.getElementById('getUsers').addEventListener('click', getUsers);
+        document.getElementById('getPosts').addEventListener('click', getPosts);
+        document.getElementById('addPost').addEventListener('submit', addPost);
+        document.getElementById('getData').addEventListener('click', getData);
+
+        function getText(){
+            // fetch('sample.txt')
+            // .then(function(res){
+            //     return res.text();
+            // })
+            // .then(function(data){
+            //     console.log(data);
+            // });
+
+            fetch('sample.txt')
+            .then((res)=>res.text())
+            .then((data) => {
+                document.getElementById('output').innerHTML = data;
+            })
+            .catch((err)=>console.log(err))
+        }
+
+
+        function getUsers(){
+            fetch('users.json')
+            .then((res)=>res.json())
+            .then((data) => {
+                let output = '<h2>Users</h2>';
+                data.forEach(function(user){
+                    output += `
+                    <u1>
+                        <li>ID : ${user.id}</li>
+                        <li>Name : ${user.name}</li>
+                        <li>Email : ${user.email}</li>
+                    </u1>                    
+                    `;
+                })
+                document.getElementById('output').innerHTML = output;
+            });
+        }
+
+        function getPosts(){
+            fetch('https://jsonplaceholder.typicode.com/posts')
+            .then((res)=>res.json())
+            .then((data) => {
+                let output = '<h2>Posts</h2>';
+                data.forEach(function(post){
+                    output += `
+                    <div>
+                        <h3>${post.title}</h3>    
+                        <p>${post.body}
+                    </div>                   
+                    `;
+                })
+                document.getElementById('output').innerHTML = output;
+            });
+        }
+
+        function addPost(e){
+            e.preventDefault();
+
+            let title = document.getElementById('title').value;
+            let body = document.getElementById('body').value;
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method:'POST',
+                headers: {
+                    'Accept':'application/json, text/plain, */*',
+                    'Content-type':'application/json',
+                },
+                body:JSON.stringify({title:title, body:body})
+            })
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+        }
+
+        function getData(){
+            fetch('https://api.covid19api.com/dayone/country/south-korea/status/confirmed')
+            .then((res)=>res.json())
+            .then((data) => {
+                let output = `
+                    <h2>COVID19-DayOne</h2>
+                `;
+                data.forEach(function(e){
+                    output += `
+                    <u1>
+                        <li>Country : ${e.Country}</li>
+                        <li>CountryCode : ${e.CountryCode}</li>
+                        <li>Cases : ${e.Cases}</li>
+                        <li>Date : ${e.Date}</li>
+                    </u1>      
+                    </br>              
+                    `;
+                })
+                document.getElementById('output').innerHTML = output;
+            });
+        }
+    </script>
+
+    
+        
     
 </body>
 </html>

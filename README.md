@@ -6,7 +6,7 @@
 - [x] URL Routing 처리(index.html 출력, nodemon 모듈 설치)
 - [x] views 폴더를 static 디렉토리로 설정
 - [x] images 폴더 생성 후 html에 image 출력
-- [x] localhost:{port}/index 로 접속 시 index.html 출력 
+- [x] localhost:{port}/index 로 접속 시 index.html 출력
 - [x] views 폴더에 POST 요청을 위한 form.html 생성
 - [x] postman 프로그램 설치
 - [x] postman 사용법 확인
@@ -21,7 +21,14 @@
 - [x] postman을 이용한 API 호출 테스트
 - [x] Fetch API를 이용한 우리나라 데이터 호출
 - [x] 호출한 데이터를 웹에 출력
-- [ ] UI는 table로 하여 데이터 출력 
+- [ ] UI는 table로 하여 데이터 출력
+
+# Todos
+- fetch.html의 javascript 소스를 api > api.js로 옮기기
+- 옮겨진 소스를 함수로 만들어서 export 하기
+- views > index.html 파일에서 api.js 불러오기
+- 불러오는 소스는 window.onload 사용하여 호출하기
+- fetch response 데이터를 JSON 타입으로 index.html 페이지에 출력하기
 
 <br/>
 

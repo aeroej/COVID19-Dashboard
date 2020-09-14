@@ -23,7 +23,7 @@
 - [x] postman을 이용한 API 호출 테스트
 - [x] Fetch API를 이용한 우리나라 데이터 호출
 - [x] 호출한 데이터를 웹에 출력
-- [ ] UI는 table로 하여 데이터 출력
+- [x] UI는 table로 하여 데이터 출력
 
 # Todos 
 ##### 200908(화)
@@ -35,8 +35,8 @@
 - index.html에서 버튼 삭제
 ##### 200909(수)
 - [ ] api.js에 함수만 남겨두고, window.onload는 index.html 파일로 옮기기 
-- [ ] UI 꾸미기
-- [ ] callback hell 찾아보기
+- [x] UI 꾸미기
+- [x] callback hell 찾아보기
 - [ ] fetch API 사용한 부분 리팩토링
 ```
 1. 인덱스 페이지 접속(메인 페이지 로드) -> api.js의 함수 호출 -> 데이터를 페이지에 rendering

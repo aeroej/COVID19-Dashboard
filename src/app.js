@@ -44,9 +44,9 @@ app.post('/email_post', function(req, res){
 });
 
 app.post('/ajax_send_email', function(req, res){
-    console.log(req.body.email);
+    console.log(req.body.name + " " + req.body.tel + " " + req.body.email);
     //check validation about input value => select db
-    var responseData = {'result': 'ok', 'email' : req.body.email}
+    var responseData = {'result': 'ok', 'name' : req.body.name, 'tel' : req.body.tel, 'email' : req.body.email}
     res.json(responseData)
 });
 

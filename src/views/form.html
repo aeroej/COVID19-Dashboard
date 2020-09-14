@@ -39,14 +39,14 @@
 
     <script>
         document.querySelector('.ajaxsend').addEventListener('click', function(){
-            var inputdata = document.forms[0].elements[0].value;
-            inputdata += document.forms[0].elements[1].value;
-            inputdata += document.forms[0].elements[2].value;
-            sendAjax('http://localhost:5000/ajax_send_email', inputdata);
+            var inputName = document.forms[0].elements[0].value;
+            var inputTel = document.forms[0].elements[1].value;
+            var inputEmail = document.forms[0].elements[2].value;
+            sendAjax('http://localhost:5000/ajax_send_email', inputName, inputTel, inputEmail);
         });
 
-        function sendAjax(url, data){
-            var data = {'email' : data};
+        function sendAjax(url, inputName, inputTel, inputEmail){
+            var data = {'name' : inputName, 'tel' : inputTel, 'email' : inputEmail};
             data = JSON.stringify(data);
 
             var xhr = new XMLHttpRequest();

@@ -5,15 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>index.html</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        thead{
+            background-color: #343a40;
+            color: white;
+        }
+
+        td, th{
+            padding : 12px;
+            border-bottom : 1px solid #dee2e6;
+            font-size : 1.2em;
+        }
+
+        .sticky-top{
+            color:white; 
+            background-color: #272c31;
+            text-align:center;
+        }
+
+        .footer{
+            background-color: #272c31;
+            color:white; 
+            text-align:center;
+            padding:12px;
+        }
+    </style>
 </head>
 <body>
     <!-- 루트 페이지 -->
-    <h1>COVID-19</h1>
-    <p>South Korea</p>
-
+    <div class="sticky-top">
+        <h1 class="display-3">COVID-19 Dashboard</h1>
+        <hr>
+    </div>
     <!-- <button id="getData">Get COVID DATA</button> -->
-    <hr>
-    <div id="output"></div>
+    
+    <div id="output" style="padding-bottom: 100px"></div>
+
+    <div class="footer">
+        <h4 class="display-5">POSTMAN</h4>
+        <h5>Coronavirus COVID19 API</h5>
+    </div>
 
     <script src="api">
       /**

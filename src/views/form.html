@@ -5,21 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>email form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+<style>
+    .container{
+        padding:30px;
+    }
+</style>
 <body>
     <!-- JSON 활용한 Ajax처리 연습 -->
-    <form action="/email_post" method="post">
-        email : <input type="text" name="email"><br/>
-        submit <input type="submit">
-    </form>
-
-    <button class="ajaxsend">ajaxsend</button>
-
-    <div class = "result"></div>
+    <div class="container">
+        <table class="table table-borderless">
+            <form action="/email_post" method="post">
+                <tr>
+                    <td>Name : </td>
+                    <td><input type="text" name="name"><br/></td>
+                </tr>
+                <tr>
+                    <td>Tel : </td>
+                    <td><input type="text" name="tel"><br/></td>
+                </tr>
+                <tr>
+                    <td>Email : </td>
+                    <td><input type="text" name="email"><br/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></td></form>
+                    <td><button class="ajaxsend">Ajaxsend</button></td>
+                </tr>  
+        </table>
+        <div class = "result"></div>
+    </div>
 
     <script>
         document.querySelector('.ajaxsend').addEventListener('click', function(){
             var inputdata = document.forms[0].elements[0].value;
+            inputdata += document.forms[0].elements[1].value;
+            inputdata += document.forms[0].elements[2].value;
             sendAjax('http://localhost:5000/ajax_send_email', inputdata);
         });
 

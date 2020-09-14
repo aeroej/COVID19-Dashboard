@@ -7,6 +7,9 @@ app.listen(5000, function(){
 });
 
 app.use(express.static('views'))
+app.use(express.static('api'))
+app.use(express.static('assets'))
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine', 'ejs')
@@ -25,14 +28,6 @@ app.get('/email', function(req,res){
     res.sendFile(__dirname + "/views/form.html")
 })
 
-app.post('/member',(req,res)=>{
-    console.log("POST로 데이터 수신");
-    console.log("이름 : " + req.body.name);
-    console.log("전화 : " + req.body.tel);
-    console.log("이메일 : " + req.body.email);
-    res.send("Server Get");
-});
-
 app.post('/email_post', function(req, res){
     //get : req.param('email')
     console.log(req.body.name)
@@ -40,7 +35,7 @@ app.post('/email_post', function(req, res){
     console.log(req.body.email)
     // html 작성 시 쌍따옴표
     // res.send("<h1>welcome " + req.body.email + "</h1>")
-    res.render('../templates/email.ejs', {'name' : req.body.name, 'tel' : req.body.tel, 'email' : req.body.email})
+    res.render('./templates/email.ejs', {'name' : req.body.name, 'tel' : req.body.tel, 'email' : req.body.email})
 });
 
 app.post('/ajax_send_email', function(req, res){
@@ -49,9 +44,6 @@ app.post('/ajax_send_email', function(req, res){
     var responseData = {'result': 'ok', 'name' : req.body.name, 'tel' : req.body.tel, 'email' : req.body.email}
     res.json(responseData)
 });
-
-
-
 
 app.get('/api', function(req,res){
     res.sendFile(__dirname + "/api/api.js")

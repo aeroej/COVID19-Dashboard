@@ -1,4 +1,9 @@
 # Task
+
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzzsza)](https://hits.seeyoufarm.com) 
+
+
 ##### 9월 첫째주
 - [x] Naming 수정 (명사형)
 - [x] src 디렉토리 생성 후 index.js 이동
